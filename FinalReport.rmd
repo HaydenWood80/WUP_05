@@ -17,22 +17,42 @@ triUmp <-read.csv(file="triUmpsal.csv",header=TRUE)
 
 A new  preventative aides drug (triUmpsal) is under test in clinical trials. Consider only the DrugUsers, does this drug seem effective?  Hint - use dplyr to obtain that subpopulation with the filter command.
 
-$H_0$: 
-$H_A$:
+$H_0$: TriUmpsal, the new preventative aides drug, does not demonstrate effectiveness among DrugUsers in clinical trials.
+$H_A$: TriUmpsal, the new preventative aides drug, does demonstrate effectiveness among DrugUsers in clinical trials.
 
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
 Vairables we use are:
+
 treatment - Catagorical
 DrugUser - Catagorical
-infected - catagorical
+infected - catagorical  
+
+We began by loading the data from the provided CSV file into R using the `read.csv()` function. Afterward, we performed data manipulation using the `tidyverse` package, including subsetting the data to focus exclusively on DrugUsers. 
+
+Descriptive analysis involved calculating summary statistics and creating graphical representations of the data to identify any patterns or trends relevant to our research question. We employed numerical methods such as calculating frequencies and proportions and graphical methods such as bar plots and histograms.
+
+For inferential analysis, we conducted hypothesis testing to determine whether TriUmpsal demonstrated effectiveness among DrugUsers. We utilized appropriate statistical tests, considering the assumptions of each test and ensuring their suitability for our research question.
+
+Overall, our methods were designed to provide a comprehensive assessment of TriUmpsal's effectiveness among DrugUsers in clinical trials. 
+ 
+      
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
-
+treatment infected druguser
 ## Descriptive Results
+```{r}
+ggplot(data = triUmp, aes(x = DrugUser, fill = infected)) +
+  geom_bar(position = "fill") +
+  labs(title = "Proportion of Infections among Drug Users",
+       x = "Drug User",
+       y = "Proportion") +
+  scale_fill_manual(values = c("blue", "red"), name = "Infection Status")
+```
+With this G plot we can see that Being a drug User has no difference in Data between Non drug users and Drug users. 
 
 ### Graphical Descriptive Results
 
