@@ -89,3 +89,5 @@ The inferential results show the the P value is 0.0104
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+In conclusion, based on the statistical analysis conducted, we reject the $H_0$ and conclude that TriUmpsal demonstrates effectiveness among DrugUsers in clinical trials.Also we conclude that there is no correlation between HIV ionfection and triUmpsal Druguse. This suggests that TriUmpsal may be a promising intervention for addressing certain health concerns associated with drug use. Further research and validation studies may be warranted to confirm these findings and to explore the long-term efficacy and safety of TriUmpsal.
