@@ -66,10 +66,16 @@ ggplot(data = triUmp, aes(x = DrugUser, y = treatment)) +
 ```
 This  ggPlot shows that through the placebo and the Drugusers there were not correlation in between effects in druguser and treatment 
 
-
+triUmp
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+```{r}
+table2 <- xtabs(~treatment + DrugUser, data=triUmp)
+rowPerc(table2)
+colPerc(table2)
+```
+This shows the precentages between infection between Drugusers who got the drug and Drugusers who also got the placebo sample. The data shows that The percentages are very simalar between Placebo and DrugUsers
 
 ## Inferential Results
 
